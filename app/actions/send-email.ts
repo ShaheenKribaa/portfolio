@@ -3,7 +3,7 @@
 import { Resend } from "resend"
 
 // Use the API key directly in the v0 preview environment
-const resendApiKey = "re_GtFqyW4m_AjFo1ASH1GSaSg8TpNwmtPtp"
+const resendApiKey = "re_PsbmVW44_A7hXva9hZd6GYPm1XBckecM8"
 
 const resend = new Resend(resendApiKey)
 
@@ -28,7 +28,7 @@ export async function sendEmail(formData: FormData) {
       from: "Portfolio Contact <onboarding@resend.dev>",
       to: "yaatoosaamaa@gmail.com", // The verified email associated with your Resend account
       subject: `Portfolio Contact: ${subject} (for shaheenkribaa@gmail.com)`,
-      reply_to: email,
+      replyTo: email,
       text: `
 This message was intended for: shaheenkribaa@gmail.com
 
