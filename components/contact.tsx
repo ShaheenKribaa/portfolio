@@ -114,7 +114,7 @@ export function Contact() {
                 </div>
                 <div>
                   <p className="text-sm text-muted-foreground">Location</p>
-                  <p className="font-medium">Tassousst — Jijel, 18038, Algeria</p>
+                  <p className="font-medium">AL KHROUB — Constantine, 25026, Algeria</p>
                 </div>
               </div>
               <div className="flex items-center gap-4">
@@ -124,7 +124,7 @@ export function Contact() {
                 <div>
                   <p className="text-sm text-muted-foreground">LinkedIn</p>
                   <a
-                    href="https://linkedin.com/in/your-profile"
+                    href="www.linkedin.com/in/chahinekribaa/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="font-medium hover:text-primary transition-colors"
@@ -135,7 +135,7 @@ export function Contact() {
               </div>
               <div className="pt-4">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d102888.38491556!2d5.6882!3d36.8082!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12f25e7b1c3c9f9f%3A0x4a0d3c29f9c6b53d!2sJijel!5e0!3m2!1sen!2sdz!4v1656543745932!5m2!1sen!2sdz"
+                  src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d3216.6042930817935!2d6.7108212!3d36.2733848!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sdz!4v1744281528900!5m2!1sen!2sdz"
                   width="100%"
                   height="200"
                   style={{ border: 0, borderRadius: "0.5rem" }}
