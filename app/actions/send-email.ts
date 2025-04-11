@@ -3,9 +3,9 @@
 import { Resend } from "resend"
 
 // Use the API key directly in the v0 preview environment
-const resendApiKey = "re_PsbmVW44_A7hXva9hZd6GYPm1XBckecM8"
+const RESEND_API_KEY = "re_PsbmVW44_A7hXva9hZd6GYPm1XBckecM8"
 
-const resend = new Resend(resendApiKey)
+const resend = new Resend(RESEND_API_KEY)
 
 export async function sendEmail(formData: FormData) {
   const name = formData.get("name") as string
