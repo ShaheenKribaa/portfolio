@@ -124,7 +124,7 @@ export function Contact() {
                 <div>
                   <p className="text-sm text-muted-foreground">LinkedIn</p>
                   <a
-                    href="www.linkedin.com/in/chahinekribaa/"
+                    href="https://www.linkedin.com/in/chahinekribaa/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="font-medium hover:text-primary transition-colors"
