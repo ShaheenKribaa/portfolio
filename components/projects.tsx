@@ -11,7 +11,7 @@ export function Projects() {
       title: "E-Learning Web App",
       description:
         "Built a modern web application that allows students to reserve 1-on-1 sessions with teachers. Used Next.js for the frontend and Supabase for backend and authentication. Integrated modern UI/UX principles using Figma and responsive design practices.",
-      image: "/E_learning.png",
+      image: "/E_Learning.png",
       tags: ["Next.js", "Supabase", "Figma", "UI/UX", "Responsive Design"],
       demoUrl: "#",
       githubUrl: "#",
@@ -22,7 +22,7 @@ export function Projects() {
       title: "Team Orienteering Problem with Time Windows (TOPTW)",
       description:
         "Developed a new solution for the Team Orienteering Problem with Time Windows using Iterated Local Search (ILS) in Python with various optimization techniques.",
-      image: "/toptw.png",
+      image: "/TOPTW.png",
       tags: ["Python", "Optimization", "Algorithms", "Data Analysis"],
       demoUrl: "#",
       githubUrl: "#",
