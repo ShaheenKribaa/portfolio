@@ -6,6 +6,20 @@ export function Experience() {
   const experiences = [
     {
       id: 1,
+      title: "Freelance Web Developer & AI Solutions Engineer",
+      company: "Remote",
+      location: "Remote",
+      period: "January 2024 - Present",
+      description: [
+        "Designed and developed responsive web applications using Next.js and Supabase, including a feature-rich e-learning platform for student-teacher interaction.",
+        "Specialized in creating and fine-tuning AI agents to automate tasks and solve complex problems rapidly using prompt engineering techniques.",
+        "Worked closely with clients to gather requirements, develop scalable solutions, and deliver high-quality results under tight deadlines.",
+        "Utilized Figma and other design tools to craft intuitive user interfaces and improve user experiences.",
+      ],
+      type: "work",
+    },
+    {
+      id: 2,
       title: "IT Intern",
       company: "Algerie Qatari Steel",
       location: "Milia, Jijel",
@@ -13,24 +27,24 @@ export function Experience() {
       description: [
         "Gained hands-on experience with SAP ERP systems under the supervision of PwC and Seidor, contributing to the implementation of ERP solutions across 5 major departments.",
         "Collaborated with a team of 10+ IT professionals, enhancing teamwork skills and adapting to the organizational culture of a multinational company.",
-        "Assisted with over 50 system configuration tasks, troubleshooting issues, and providing support, which improved system efficiency and reduced downtime by 20%.",
-        "Participated in 3 key projects that optimized ERP functionalities, leading to a 15% increase in operational efficiency and a 10% reduction in processing time for business operations.",
+        "Assisted with system configuration tasks, troubleshooting issues, and providing support.",
+        "Participated in key project that optimized ERP functionalities.",
       ],
       type: "work",
     },
     {
-      id: 2,
+      id: 3,
       title: "Master's Degree in System Information and Decision Support",
       company: "Mohammed Seddik Benyahia",
       location: "Jijel",
-      period: "September 2021 - Expected September 2024",
+      period: "September 2021 - September 2024",
       description: [
-        "Relevant coursework: Advanced Data Analytics, Decision Support Systems, Systems Design and Analysis, Data Mining, IT Project Management, Operations Research.",
+        "Relevant coursework: Decision Support Systems, Systems Design and Analysis, IT Project Management, Operations Research.",
       ],
       type: "education",
     },
     {
-      id: 3,
+      id: 4,
       title: "Bachelor's Degree in Information Systems",
       company: "Mohammed Seddik Benyahia",
       location: "Jijel",
@@ -44,8 +58,8 @@ export function Experience() {
 
   const certifications = [
     "Digital Advertising Fundamentals – Microsoft Advertising (August 2022)",
-    "Big Data Basics – Udemy (October 2022)",
-    "Data Analytics, Storage, Mining & Visual Big Data Technologies – Udemy (October 2022)",
+    "Bachelor degree in information systems – University Mohammed Seddik Benyahia (June 2021)",
+    "Master's Degree in System Information and Decision Support – University Mohammed Seddik Benyahia (September 2024)",
   ]
 
   return (

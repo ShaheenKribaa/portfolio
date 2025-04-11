@@ -1,5 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card"
-import { Code, Layout, Cpu, BookOpen, Globe, Briefcase } from "lucide-react"
+import { Code, Layout, Cpu, BookOpen, Globe, Briefcase, Bot } from "lucide-react"
 
 export function Skills() {
   const skillCategories = [
@@ -13,28 +13,34 @@ export function Skills() {
       id: 2,
       title: "Programming Languages",
       icon: <Code className="h-8 w-8 text-primary" />,
-      skills: ["Python", "JavaScript", "Flutter", "Java"],
+      skills: ["Python", "JavaScript", "Dart (Flutter)", "SQL"],
     },
     {
       id: 3,
       title: "Tools & Technologies",
       icon: <Cpu className="h-8 w-8 text-primary" />,
-      skills: ["Git", "GitHub", "Firebase", "SQL"],
+      skills: ["Git", "GitHub", "Firebase", "Supabase"],
     },
     {
       id: 4,
       title: "Frameworks & Libraries",
       icon: <Layout className="h-8 w-8 text-primary" />,
-      skills: ["React"],
+      skills: ["React", "Next.js"],
     },
     {
       id: 5,
+      title: "AI & Design",
+      icon: <Bot className="h-8 w-8 text-primary" />,
+      skills: ["Prompt Engineering", "AI Agents", "Figma", "Responsive Design"],
+    },
+    {
+      id: 6,
       title: "Languages",
       icon: <Globe className="h-8 w-8 text-primary" />,
       skills: ["Arabic (Native)", "English (Fluent)", "French (Intermediate)"],
     },
     {
-      id: 6,
+      id: 7,
       title: "Education",
       icon: <BookOpen className="h-8 w-8 text-primary" />,
       skills: ["Master's in System Information and Decision Support", "Bachelor's in Information Systems"],

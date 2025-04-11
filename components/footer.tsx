@@ -62,7 +62,6 @@ export function Footer() {
           </div>
           <div className="text-center text-muted-foreground text-sm">
             <p>© {new Date().getFullYear()} Chahine Kribaa. All rights reserved.</p>
-            <p className="mt-2">Designed and built with ❤️</p>
           </div>
           <Button variant="outline" size="icon" className="mt-8" onClick={scrollToTop} aria-label="Scroll to top">
             <ArrowUp className="h-4 w-4" />

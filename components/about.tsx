@@ -17,12 +17,11 @@ export function About() {
           <Card>
             <CardContent className="p-6 md:p-8">
               <h3 className="text-2xl font-semibold mb-4">Kribaa Chahine</h3>
-              <p className="text-muted-foreground mb-4">Based in Tassousst — Jijel, 18038, Algeria</p>
+              <p className="text-muted-foreground mb-4">Based in AL KHROUB — Constantine, 25026, Algeria</p>
               <p className="text-muted-foreground mb-6">
-                I'm a passionate Information Systems specialist with expertise in System Information and Decision
-                Support. I excel in problem-solving, rapidly adapting to new technologies, and fostering positive team
-                environments. My multilingual proficiency in Arabic, English, and French facilitates cross-cultural
-                communication.
+              I'm a passionate Information Systems specialist and Freelance Web Developer with expertise in System
+                Information and Decision Support. I excel in problem-solving, rapidly adapting to new technologies, and
+                fostering positive team environments. My experience includes developing responsive web applications as well as creating AI solutions through prompt engineering.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button asChild>

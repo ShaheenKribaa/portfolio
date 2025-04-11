@@ -8,43 +8,54 @@ export function Projects() {
   const projects = [
     {
       id: 1,
+      title: "E-Learning Web App",
+      description:
+        "Built a modern web application that allows students to reserve 1-on-1 sessions with teachers. Used Next.js for the frontend and Supabase for backend and authentication. Integrated modern UI/UX principles using Figma and responsive design practices.",
+      image: "/E_learning.png",
+      tags: ["Next.js", "Supabase", "Figma", "UI/UX", "Responsive Design"],
+      demoUrl: "#",
+      githubUrl: "#",
+      date: "November 2024 - February 2025",
+    },
+    {
+      id: 2,
       title: "Team Orienteering Problem with Time Windows (TOPTW)",
       description:
         "Developed a new solution for the Team Orienteering Problem with Time Windows using Iterated Local Search (ILS) in Python with various optimization techniques.",
-      image: "/placeholder.svg?height=400&width=600",
+      image: "/toptw.png",
       tags: ["Python", "Optimization", "Algorithms", "Data Analysis"],
       demoUrl: "#",
       githubUrl: "#",
       date: "January 2024 - August 2024",
     },
     {
-      id: 2,
+      id: 3,
       title: "Chat Room Application",
       description:
         "Created a chat room application using Java with a client-server architecture. Designed and developed features for user management and message handling with robust connection stability.",
-      image: "/placeholder.svg?height=400&width=600",
+      image: "/chatroom.png",
       tags: ["Java", "Client-Server", "Networking", "UI Design"],
       demoUrl: "#",
       githubUrl: "#",
       date: "January 2021 - June 2021",
     },
     {
-      id: 3,
+      id: 4,
       title: "Genetic Algorithms Implementation",
       description:
         "Applied genetic algorithms to solve complex optimization problems using Python. Developed and tested over 5 different genetic algorithm strategies to optimize performance.",
-      image: "/placeholder.svg?height=400&width=600",
+      image: "/genetic_algo.png",
       tags: ["Python", "Genetic Algorithms", "Optimization"],
       demoUrl: "#",
       githubUrl: "#",
       date: "2022",
     },
     {
-      id: 4,
+      id: 5,
       title: "Warehouse Management System",
       description:
         "Developed a warehouse management system using SQL Developer and Java, optimizing inventory management and order processing. Designed and implemented database structures and user interfaces.",
-      image: "/placeholder.svg?height=400&width=600",
+      image: "/warehouse_manag.png",
       tags: ["Java", "SQL", "Database Design", "UI/UX"],
       demoUrl: "#",
       githubUrl: "#",
