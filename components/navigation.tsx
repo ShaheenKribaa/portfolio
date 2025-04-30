@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
 
@@ -28,8 +29,8 @@ export function Navigation() {
   return (
     <div className="container mx-auto px-4 py-4">
       <div className="flex justify-between items-center">
-        <Link href="/" className="text-2xl font-bold">
-          Chahine
+      <Link href="/" className="flex items-center">
+          <Image src="/logo.png" alt="CK Logo" width={48} height={48} priority />
         </Link>
         <div className="hidden md:flex space-x-6">
           {navItems.map((item) => (
