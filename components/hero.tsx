@@ -33,7 +33,7 @@ export function Hero() {
       </div>
       <div className="flex-1 flex flex-col justify-center items-center text-center px-4 md:px-6 py-10 md:py-24 max-w-5xl mx-auto">
         <h1 className="text-4xl md:text-6xl font-bold tracking-tighter mb-4">
-          <span className="text-primary">Hello, I'm</span> Kribaa Chahine
+          <span className="text-primary">Kribaa</span>  Chahine
         </h1>
         <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-[700px]">
           A passionate Information Systems specialist with expertise in System Information and Decision Support.
