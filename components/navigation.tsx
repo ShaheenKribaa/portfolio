@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import Link from "next/link"
-import Image from "next/image"
+import { Logo } from "@/components/logo"
 import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
 import { ThemeToggle } from "../components/theme-toggle"
@@ -31,7 +31,7 @@ export function Navigation() {
     <div className="container mx-auto px-4 py-4">
       <div className="flex justify-between items-center">
       <Link href="/" className="flex items-center">
-          <Image src="/logo.png" alt="CK Logo" width={48} height={48} priority />
+      <Logo width={60} height={60} />
         </Link>
         <div className="hidden md:flex items-center space-x-6">
           {navItems.map((item) => (

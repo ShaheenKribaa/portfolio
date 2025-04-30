@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import Image from "next/image"
+import { Logo } from "@/components/logo"
 import { Button } from "@/components/ui/button"
 import { Github, Linkedin, Twitter, Instagram, ArrowUp } from "lucide-react"
 
@@ -19,7 +19,7 @@ export function Footer() {
         <div className="flex flex-col items-center">
           <div className="mb-8">
           <Link href="/" className="flex items-center">
-              <Image src="/logo.png" alt="CK Logo" width={60} height={60} />
+          <Logo width={60} height={60} />
             </Link>
           </div>
           <div className="flex space-x-4 mb-8">
