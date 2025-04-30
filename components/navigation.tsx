@@ -2,13 +2,16 @@
 
 import { useState } from "react"
 import Link from "next/link"
-import { Logo } from "@/components/logo"
 import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
-import { ThemeToggle } from "../components/theme-toggle"
+import { ThemeToggle } from "@/components/theme-toggle"
+import { Logo } from "@/components/logo"
+import { LanguageSwitcher } from "@/components/language-switcher"
+import { useLanguage } from "@/lib/i18n/language-context"
 
 export function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const { t } = useLanguage()
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen)
@@ -19,37 +22,41 @@ export function Navigation() {
   }
 
   const navItems = [
-    { name: "Home", href: "#" },
-    { name: "About", href: "#about" },
-    { name: "Experience", href: "#experience" },
-    { name: "Projects", href: "#projects" },
-    { name: "Skills", href: "#skills" },
-    { name: "Contact", href: "#contact" },
+    { name: t("nav.home"), href: "#" },
+    { name: t("nav.about"), href: "#about" },
+    { name: t("nav.experience"), href: "#experience" },
+    { name: t("nav.projects"), href: "#projects" },
+    { name: t("nav.skills"), href: "#skills" },
+    { name: t("nav.contact"), href: "#contact" },
   ]
 
   return (
     <div className="container mx-auto px-4 py-4">
       <div className="flex justify-between items-center">
-      <Link href="/" className="flex items-center">
-      <Logo width={60} height={60} />
+        <Link href="/" className="flex items-center">
+          <Logo />
         </Link>
-        <div className="hidden md:flex items-center space-x-6">
+        <div className="hidden md:flex items-center">
           {navItems.map((item) => (
             <Link
               key={item.name}
               href={item.href}
-              className="text-muted-foreground hover:text-foreground transition-colors"
+              className="text-muted-foreground hover:text-foreground transition-colors px-4"
             >
               {item.name}
             </Link>
           ))}
-          <ThemeToggle />
+          <div className="flex items-center gap-2 ml-4">
+            <LanguageSwitcher />
+            <ThemeToggle />
+          </div>
         </div>
         <div className="flex items-center md:hidden">
+          <LanguageSwitcher />
           <ThemeToggle />
           <Button variant="ghost" size="icon" className="ml-2" onClick={toggleMenu} aria-label="Toggle menu">
-          {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-        </Button>
+            {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          </Button>
         </div>
       </div>
       {isMenuOpen && (

@@ -10,8 +10,10 @@ import { Textarea } from "@/components/ui/textarea"
 import { Mail, Phone, MapPin, Send, Loader2, CheckCircle, AlertCircle, Linkedin } from "lucide-react"
 import { useToast } from "@/hooks/use-toast"
 import { sendEmail } from "@/app/actions/send-email"
+import { useLanguage } from "@/lib/i18n/language-context"
 
 export function Contact() {
+  const { t } = useLanguage()
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -49,8 +51,8 @@ export function Contact() {
           message: "",
         })
         toast({
-          title: "Message sent!",
-          description: "Thank you for your message. I'll get back to you soon.",
+          title: t("contact.messageSent"),
+          description: t("contact.thankYou"),
           variant: "default",
         })
 
@@ -62,8 +64,8 @@ export function Contact() {
         setIsPending(false)
         setFormStatus("error")
         toast({
-          title: "Error sending message",
-          description: result.error || "Something went wrong. Please try again.",
+          title: t("contact.error"),
+          description: result.error || t("contact.errorMessage"),
           variant: "destructive",
         })
       }
@@ -72,8 +74,8 @@ export function Contact() {
       setIsPending(false)
       setFormStatus("error")
       toast({
-        title: "Error sending message",
-        description: "Something went wrong. Please try again.",
+        title: t("contact.error"),
+        description: t("contact.errorMessage"),
         variant: "destructive",
       })
     }
@@ -81,13 +83,13 @@ export function Contact() {
 
   return (
     <section id="contact" className="py-20">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Get In Touch</h2>
+      <div className="container mx-auto px-4">        
+      <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">{t("contact.title")}</h2>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
           <Card>
             <CardHeader>
-              <CardTitle>Contact Information</CardTitle>
-              <CardDescription>Feel free to reach out through any of these channels</CardDescription>
+            <CardTitle>{t("contact.contactInfo")}</CardTitle>
+            <CardDescription>{t("contact.contactChannels")}</CardDescription>
             </CardHeader>
             <CardContent className="space-y-6">
               <div className="flex items-center gap-4">
@@ -95,7 +97,7 @@ export function Contact() {
                   <Mail className="h-6 w-6 text-primary" />
                 </div>
                 <div>
-                  <p className="text-sm text-muted-foreground">Email</p>
+                <p className="text-sm text-muted-foreground">{t("contact.email")}</p>
                   <p className="font-medium">shaheenkribaa@gmail.com</p>
                 </div>
               </div>
@@ -104,7 +106,7 @@ export function Contact() {
                   <Phone className="h-6 w-6 text-primary" />
                 </div>
                 <div>
-                  <p className="text-sm text-muted-foreground">Phone</p>
+                <p className="text-sm text-muted-foreground">{t("contact.phone")}</p>
                   <p className="font-medium">+213 792017211</p>
                 </div>
               </div>
@@ -113,7 +115,7 @@ export function Contact() {
                   <MapPin className="h-6 w-6 text-primary" />
                 </div>
                 <div>
-                  <p className="text-sm text-muted-foreground">Location</p>
+                <p className="text-sm text-muted-foreground">{t("contact.location")}</p>
                   <p className="font-medium">AL KHROUB — Constantine, 25026, Algeria</p>
                 </div>
               </div>
@@ -149,15 +151,15 @@ export function Contact() {
           </Card>
           <Card>
             <CardHeader>
-              <CardTitle>Send Me a Message</CardTitle>
-              <CardDescription>I'll get back to you as soon as possible</CardDescription>
+            <CardTitle>{t("contact.sendMessage")}</CardTitle>
+            <CardDescription>{t("contact.getBack")}</CardDescription>
             </CardHeader>
             <CardContent>
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="space-y-2">
                     <label htmlFor="name" className="text-sm font-medium">
-                      Your Name
+                    {t("contact.yourName")}
                     </label>
                     <Input
                       id="name"
@@ -171,7 +173,7 @@ export function Contact() {
                   </div>
                   <div className="space-y-2">
                     <label htmlFor="email" className="text-sm font-medium">
-                      Your Email
+                    {t("contact.yourEmail")}
                     </label>
                     <Input
                       id="email"
@@ -187,7 +189,7 @@ export function Contact() {
                 </div>
                 <div className="space-y-2">
                   <label htmlFor="subject" className="text-sm font-medium">
-                    Subject
+                  {t("contact.subject")}
                   </label>
                   <Input
                     id="subject"
@@ -201,7 +203,7 @@ export function Contact() {
                 </div>
                 <div className="space-y-2">
                   <label htmlFor="message" className="text-sm font-medium">
-                    Message
+                  {t("contact.message")}
                   </label>
                   <Textarea
                     id="message"
@@ -218,22 +220,22 @@ export function Contact() {
                   {isPending ? (
                     <>
                       <Loader2 className="h-4 w-4 animate-spin" />
-                      Sending...
+                      {t("contact.sending")}
                     </>
                   ) : formStatus === "success" ? (
                     <>
                       <CheckCircle className="h-4 w-4" />
-                      Sent Successfully
+                      {t("contact.sent")}
                     </>
                   ) : formStatus === "error" ? (
                     <>
                       <AlertCircle className="h-4 w-4" />
-                      Try Again
+                      {t("contact.tryAgain")}
                     </>
                   ) : (
                     <>
                       <Send className="h-4 w-4" />
-                      Send Message
+                      {t("contact.send")}
                     </>
                   )}
                 </Button>
