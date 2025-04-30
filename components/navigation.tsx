@@ -5,6 +5,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
+import { ThemeToggle } from "../components/theme-toggle"
 
 export function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -32,7 +33,7 @@ export function Navigation() {
       <Link href="/" className="flex items-center">
           <Image src="/logo.png" alt="CK Logo" width={48} height={48} priority />
         </Link>
-        <div className="hidden md:flex space-x-6">
+        <div className="hidden md:flex items-center space-x-6">
           {navItems.map((item) => (
             <Link
               key={item.name}
@@ -42,10 +43,14 @@ export function Navigation() {
               {item.name}
             </Link>
           ))}
+          <ThemeToggle />
         </div>
-        <Button variant="ghost" size="icon" className="md:hidden" onClick={toggleMenu} aria-label="Toggle menu">
+        <div className="flex items-center md:hidden">
+          <ThemeToggle />
+          <Button variant="ghost" size="icon" className="ml-2" onClick={toggleMenu} aria-label="Toggle menu">
           {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
         </Button>
+        </div>
       </div>
       {isMenuOpen && (
         <div className="md:hidden absolute top-16 left-0 right-0 bg-background z-50 shadow-lg">
