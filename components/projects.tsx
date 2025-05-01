@@ -45,7 +45,7 @@ export function Projects() {
         fr: "Développement d'une nouvelle solution pour le Problème d'Orientation d'Équipe avec Fenêtres Temporelles en utilisant la Recherche Locale Itérée (ILS) en Python avec diverses techniques d'optimisation.",
         ar: "تطوير حل جديد لمشكلة توجيه الفريق مع النوافذ الزمنية باستخدام البحث المحلي المتكرر (ILS) في Python مع تقنيات تحسين مختلفة.",
       },
-      image: "/toptw.png",
+      image: "/TOPTW.png",
       tags: ["Python", "Optimization", "Algorithms", "Data Analysis"],
       demoUrl: "#",
       githubUrl: "#",
