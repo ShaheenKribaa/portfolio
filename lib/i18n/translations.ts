@@ -19,7 +19,7 @@ export const translations = {
     },
     about: {
       title: "About Me",
-      location: "Based in Tassousst — Jijel, 18038, Algeria",
+      location: "Based in AL-KHROUB — Constantine, 25003, Algeria",
       description:
         "I'm a passionate Information Systems specialist and Freelance Web Developer with expertise in System Information and Decision Support. I excel in problem-solving, rapidly adapting to new technologies, and fostering positive team environments. My experience includes developing responsive web applications with Next.js and Supabase, as well as creating AI solutions through prompt engineering.",
       hireMe: "Hire Me",
@@ -197,11 +197,11 @@ export const getTranslation = (lang: Language, key: string) => {
 
   for (const k of keys) {
     if (value && typeof value === "object" && k in value) {
-      value = value[k as keyof typeof value]
+      value = (value as any)[k]
     } else {
       return key // Return the key if translation not found
     }
   }
 
-  return value as string
+  return value as unknown as string
 }
