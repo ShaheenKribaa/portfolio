@@ -23,7 +23,7 @@ export function Logo({ width = 48, height = 48 }: LogoProps) {
     return <div style={{ width, height }} />
   }
 
-  const logoSrc = resolvedTheme === "dark" ? "/logo-dark.png" : "/logo.png"
+  const logoSrc = resolvedTheme === "dark" ? "/logo-dark.webp" : "/logo.jpg"
 
   return <Image src={logoSrc || "/placeholder.svg"} alt="CK Logo" width={width} height={height} priority />
 }
